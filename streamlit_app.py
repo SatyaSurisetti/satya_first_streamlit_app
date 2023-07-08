@@ -20,7 +20,7 @@ streamlit.multiselect("pick some fruits:", list(my_fruit_list.index), ['Avocado'
 streamlit.header("Fruityvice Fruit Advice!")
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 #streamlit.text(fruityvice_response.json())
-# write your own comment -what does the next line do? 
+# Below function calls a pandas function to show the json file in a normalized form. 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# write your own comment - what does this do?
+# This funciton below puts the data into a datframe.
 streamlit.dataframe(fruityvice_normalized)
