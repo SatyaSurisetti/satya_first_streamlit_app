@@ -43,3 +43,6 @@ streamlit.dataframe(my_data_rows)
 # Add a Text Entry Box and Send the Input to Fruityvice as Part of the API Call
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 streamlit.write('Thanks for adding', add_my_fruit)
+
+# This will not work correctly but just go with in for now
+streamlit.write('insert into FRUIT_LOAD_LIST values ('from streamlit')");
