@@ -35,7 +35,7 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
 # dont run anything past here while we troubleshoot
-#streamlit.stop()
+streamlit.stop()
 
 # Querying our trial account metadata
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
