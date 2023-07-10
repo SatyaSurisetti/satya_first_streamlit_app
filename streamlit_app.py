@@ -17,14 +17,12 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 streamlit.multiselect("pick some fruits:", list(my_fruit_list.index), ['Avocado','Strawberries'])
 
 # create a repeatable code block called function
-def get_fruityvice_data(this_fruit_choice)
+def get_fruityvice_data(this_fruit_choice):
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
   return fruityvice_normalized
 
 # new section to display fruity vice api response
-#fruityvice_response = requests.get("Hai Satya what are you doing?")
-
 streamlit.header("Fruityvice Fruit Advice!")
 try:
   # Add a Text Entry Box and Send the Input to Fruityvice as Part of the API Call
