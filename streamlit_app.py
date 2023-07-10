@@ -1,11 +1,11 @@
 import streamlit
-#import pandas
-#import requests
+import pandas
+import requests
 import snowflake.connector
 from urllib.error import URLError
 
 # dont run anything past here while we troubleshoot
-streamlit.stop()
+#streamlit.stop()
 
 streamlit.title (" This is my first python program on GitHub")
 streamlit.header('Breakfast favourites')
