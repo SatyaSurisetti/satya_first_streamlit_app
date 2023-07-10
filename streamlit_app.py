@@ -1,6 +1,7 @@
 import streamlit
 import pandas
 import requests
+import snowflake.connector
 streamlit.title (" This is my first python program on GitHub")
 streamlit.header('Breakfast favourites')
 streamlit.text('Omega 3 & Blueberry Oatmeal')
