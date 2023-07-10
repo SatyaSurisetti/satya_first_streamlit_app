@@ -4,9 +4,6 @@ import requests
 import snowflake.connector
 from urllib.error import URLError
 
-# dont run anything past here while we troubleshoot
-#streamlit.stop()
-
 streamlit.title (" This is my first python program on GitHub")
 streamlit.header('Breakfast favourites')
 streamlit.text('Omega 3 & Blueberry Oatmeal')
@@ -36,6 +33,9 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # This funciton below puts the data into a datframe.
 streamlit.dataframe(fruityvice_normalized)
+
+# dont run anything past here while we troubleshoot
+#streamlit.stop()
 
 # Querying our trial account metadata
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
